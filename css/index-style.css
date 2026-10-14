@@ -1,0 +1,250 @@
+html,
+body {
+	background: linear-gradient(100deg, #eaecf7 0%, #dce0f3 100%);
+	font-family: 'Poppins', sans-serif;
+	/* Aplica la fuente Poppins */
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.brand-name {
+	font-size: 24px;
+	font-weight: bold;
+	color: #2f50ff;
+	/* Color predeterminado */
+	display: inline-block;
+	/* Asegura que no se generen espacios */
+}
+
+.brand-ci,
+.brand-med {
+	margin: 0;
+	/* Sin márgenes */
+	padding: 0;
+	/* Sin relleno */
+	line-height: 1;
+	/* Ajusta la altura de línea para evitar espacios */
+}
+
+.brand-ci {
+	color: #00723e;
+	/* Verde */
+}
+
+.brand-med {
+	color: #2f50ff;
+	/* Azul actual */
+}
+
+.navbar-nav .nav-link {
+	color: #000000;
+	font-weight: 500;
+	transition: font-weight 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+	color: #333;
+	font-weight: bold;
+}
+
+.btn-admin {
+	background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+	border-radius: 50px;
+	color: white;
+	padding: 8px 20px;
+	font-weight: bold;
+	transition: background 0.3s ease;
+}
+
+.btn-admin:hover {
+	background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+}
+
+.btn-admin .bi-person-circle {
+	font-size: 20px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #f8f9fa;
+	position: relative;
+	text-align: center;
+	padding: 10px 0;
+}
+
+/* Estilo del encabezado principal */
+.main-heading {
+	font-size: 40px;
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 100xpx;
+	margin-left: 70px;
+	margin-top: auto;
+	margin-right: 0px;
+}
+
+.main-text {
+	font-size: 19px;
+	color: #6c757d;
+	margin-bottom: 25px;
+	margin-left: 70px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.btn-simulacion {
+	background: linear-gradient(90deg, #489c5b 0%, #57b578 100%);
+	border-radius: 50px;
+	color: white;
+	padding: 10px 30px;
+	font-weight: bold;
+	transition: background 0.3s ease, border-color 0.3s ease;
+	margin-left: 65px;
+	margin-bottom: auto;
+	border: 2px solid #489c5b;
+	/* Color del borde para coincidir con el botón */
+	outline: none;
+	width: 33%;
+}
+
+.btn-continue:hover{
+	color: white !important;
+}
+
+.btn-simulacion:hover {
+	background: linear-gradient(90deg, #57b578 0%, #489c5b 100%);
+	border-color: #57b578;
+	/* Cambia el color del borde al pasar el ratón */
+}
+
+.btn-simulacion:focus {
+	outline: none;
+	/* Elimina el borde azul al enfocarse */
+	border-color: #57b578;
+	/* Cambia el color del borde al enfocar */
+}
+
+.modal-header {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.modal-header .btn-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.btn-back-login {
+	background: linear-gradient(90deg, #ff2f3d 0%, #8b092e 100%);
+	border-radius: 50px;
+	color: white;
+	padding: 8px 20px;
+	font-weight: bold;
+	border-color: red;
+	transition: background 0.3s ease;
+}
+
+.btn-back-login:hover {
+	background: linear-gradient(90deg, #8b092e 0%, #ff2f3d 100%);
+	color: white;
+	border-color: red;
+}
+
+.btn-access {
+	background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+	border-radius: 50px;
+	color: white;
+	padding: 8px 20px;
+	font-weight: bold;
+	transition: background 0.3s ease;
+}
+
+.btn-access:hover {
+	background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+	color: white;
+}
+
+/* Estilo de la tarjeta de características */
+.feature-card {
+	margin-top: 40px;
+	/* Desplazamos el texto hacia abajo */
+	background: linear-gradient(190deg, #42a7ff 0%, #2f50ff 100%);
+	width: 100%;
+	/*El ancho del cuadro será el 100% del contenedor */
+	max-width: 250px;
+	padding: 10px;
+	border-radius: 8px;
+	color: white;
+	text-align: left;
+	margin-top: 100px;
+	margin-left: 55px;
+	margin-right: 120px;
+	margin-bottom: 20px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.feature-card:hover {
+	background-color: #0b1c6e;
+}
+
+.checkmark-icon {
+	width: 30px;
+	/* Ajusta el tamaño de la imagen de check mark */
+	height: 30px;
+}
+
+.feature-title {
+	font-weight: bold;
+	color: white;
+	font-size: 14px;
+	margin: 0;
+}
+
+.feature-text {
+
+	color: white;
+	font-size: 12px;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.custom-image {
+	margin-top: auto;
+	max-width: 70%;
+	/* Ajusta el porcentaje según sea necesario */
+	height: auto;
+	/* Mantiene la proporción de la imagen */
+	margin-left: 55px;
+}
+
+.btn-play {
+	background: linear-gradient(90deg, #489c5b 0%, #57b578 100%);
+	border-radius: 10px;
+	border-color: green;
+	color: white;
+	margin-left: 65px;
+	padding: 10px 30px;
+	font-weight: bold;
+	transition: background 0.3s ease;
+}
+
+.btn-play:hover {
+	background: linear-gradient(90deg, #43b96c 0%, #3abb58 100%);
+}
+
+.main-container {
+	margin-top: auto;
+	margin-bottom: auto;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIMED - Agregar caso</title>
+    <link rel="icon" type="image/png" href="images/CimarronMedicoIndexIcon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/case_form.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">
+                <span class="brand-name">
+                    <span class="brand-ci">CI</span><span class="brand-med">MED</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-panel" style="margin-left: 130px;">Panel Administrador</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="admin-panel" class="btn btn-primary btn-exit d-flex align-items-center">
+                <i class="bi bi-box-arrow-left me-2"></i> Regresar
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Input form -->
+        <h1>Registro de caso clinico</h1>
+
+        <div class="step-row">
+            <div id="progress">
+                <div class="step-col"></div>
+                <div class="step-col"></div>
+                <div class="step-col"></div>
+            </div>
+        </div>
+
+        <div class="container" id="container-form">
+
+            
+            <!-- Formulario 1 -->
+            <form id="form1" class="active" data-form="1" method="post">
+                <h3>Perfil del paciente</h3>
+                <p class="p-principal">Introduce los datos generales del paciente</p>
+            
+                <div class="two-columns">
+                    <div class="input-group">
+                        <input type="text" id="nombre-paciente" required>
+                        <label for="nombre-paciente" class="form-label">Nombre</label>
+                    </div>
+            
+                    <div class="select-container">
+                        <label for="sexo-paciente" class="select-placeholder">Sexo</label>
+                        <select id="sexo-paciente" class="custom-select" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="two-columns">
+                    <div class="input-group">
+                        <input type="number" id="edad-paciente" required>
+                        <label for="edad-paciente" class="form-label">Edad</label>
+                    </div>
+            
+                    <div class="input-group">
+                        <input type="number" step="0.1" id="peso-paciente" required>
+                        <label for="peso-paciente" class="form-label">Peso (kg)</label>
+                    </div>
+                </div>
+            
+                <div class="two-columns">
+                    <div class="input-group">
+                        <input type="number" step="0.01" id="altura-paciente" required>
+                        <label for="altura-paciente" class="form-label">Altura (cm)</label>
+                    </div>
+            
+                    <div class="input-group">
+                        <input type="number" step="1" id="fr-paciente" required>
+                        <label for="fr-paciente" class="form-label">Frecuencia respiratoria (rpm)</label>
+                    </div>
+                </div>
+            
+                <div class="two-columns">
+                    <div class="input-group">
+                        <input type="number" step="1" id="fc-paciente" required>
+                        <label for="fc-paciente" class="form-label">Frecuencia cardíaca (lpm)</label>
+                    </div>
+            
+                    <div class="input-group">
+                        <input type="text" id="ta-paciente" required>
+                        <label for="ta-paciente" class="form-label">Tensión arterial (mmHg)</label>
+                    </div>
+                </div>
+            
+                <div class="two-columns">
+                    <div class="input-group">
+                        <input type="number" step="0.1" id="temp-paciente" required>
+                        <label for="temp-paciente" class="form-label">Temperatura (°C)</label>
+                    </div>
+            
+                    <div class="input-group">
+                        <input type="number" step="1" id="sat-paciente" required>
+                        <label for="sat-paciente" class="form-label">Saturación oxígeno (%)</label>
+                    </div>
+                </div>
+            
+                <div class="textarea-group">
+                    <textarea id="enfermedades-paciente" placeholder=" " required></textarea>
+                    <label for="enfermedades-paciente" class="text-label">Antecedentes de importancia del paciente</label>
+                </div>
+            
+                <div class="btn-box">
+                    <button type="button" id="next1">Siguiente</button>
+                </div>
+            </form>
+            
+                <!-- Formulario 2 -->
+                <form id="form2" class="form2" data-form="2" method="post">
+                    <h3>Descripción del caso</h3>
+                    <p class="p-principal">Introduce la información general del caso clínico</p>
+
+                    <div class="input-group">
+                        <input type="text" id="nombre-caso" required>
+                        <label for="nombre-caso" class="form-label">Nombre del caso</label>
+                    </div>
+
+                    <div class="textarea-group">
+                        <textarea id="motivo-consulta" placeholder=" " required></textarea>
+                        <label for="motivo-consulta" class="text-label">Motivo de consulta</label>
+                    </div>
+
+                    <div class="textarea-group">
+                        <textarea id="descripcion-caso" placeholder=" " required></textarea>
+                        <label for="descripcion-caso" class="text-label">Descripción del caso</label>
+                    </div>
+
+                    <!-- Asignación de carpeta -->
+                    <div class="carpeta-section" style="margin-top:18px;">
+                        <p class="p-principal" style="margin-bottom:6px;">Carpeta <span style="font-weight:400;color:#888;">(opcional)</span></p>
+                        <p style="font-size:0.85rem;color:#666;margin-bottom:10px;">Organiza este caso en una categoría existente o crea una nueva.</p>
+                        <div class="two-columns" style="align-items:flex-start;gap:10px;">
+                            <div class="select-container" style="flex:1;">
+                                <label for="carpeta-caso" class="select-placeholder" id="label-carpeta-caso">Seleccionar carpeta</label>
+                                <select id="carpeta-caso" class="custom-select">
+                                    <option value="0">Sin carpeta</option>
+                                </select>
+                            </div>
+                            <div style="display:flex;align-items:center;padding-top:12px;">
+                                <button type="button" id="btn-nueva-carpeta-form"
+                                    style="background:linear-gradient(90deg,#00723e,#1a8f5a);color:white;border:none;border-radius:8px;padding:10px 16px;font-size:0.88rem;cursor:pointer;white-space:nowrap;">
+                                    &#128193; Nueva carpeta
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Inline: crear nueva carpeta -->
+                        <div id="nueva-carpeta-inline" style="display:none;margin-top:10px;background:#f0f4ff;border-radius:10px;padding:14px;">
+                            <p style="font-weight:600;margin-bottom:8px;font-size:0.92rem;">Crear nueva carpeta</p>
+                            <div class="input-group">
+                                <input type="text" id="nueva-carpeta-nombre" placeholder=" " maxlength="100">
+                                <label for="nueva-carpeta-nombre" class="form-label">Nombre de la carpeta</label>
+                            </div>
+                            <div style="display:flex;gap:8px;margin-top:10px;">
+                                <button type="button" id="btn-cancelar-carpeta"
+                                    style="flex:1;background:#ccc;color:#333;border:none;border-radius:8px;padding:8px;">
+                                    Cancelar
+                                </button>
+                                <button type="button" id="btn-confirmar-carpeta"
+                                    style="flex:2;background:linear-gradient(90deg,#00723e,#1a8f5a);color:white;border:none;border-radius:8px;padding:8px;font-weight:600;">
+                                    Crear y seleccionar
+                                </button>
+                            </div>
+                            <div id="carpeta-form-feedback" style="margin-top:6px;font-size:0.83rem;color:#555;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Subida de Videos (múltiples) -->
+                    <div class="video-section" style="margin-top:18px;">
+                        <p class="p-principal" style="margin-bottom:6px;">
+                            Videos del caso <span style="font-weight:400;color:#888;">(opcional)</span>
+                        </p>
+                        <p style="font-size:0.83rem;color:#888;margin-bottom:10px;">
+                            Puedes agregar más de un video por caso. Ponle un nombre descriptivo a cada uno.
+                        </p>
+                        <div id="videos-container"></div>
+                        <button type="button" id="add-video"
+                            style="margin-top:8px;background:linear-gradient(90deg,#2f50ff,#4a6aff);color:white;border:none;border-radius:8px;padding:9px 18px;font-size:0.88rem;cursor:pointer;font-weight:600;">
+                            <i class="bi bi-plus-circle me-1"></i> Agregar video
+                        </button>
+                    </div>
+
+                    <div class="btn-box">
+                        <button type="button" id="back1">Atrás</button>
+                        <button type="button" id="next2">Siguiente</button>
+                    </div>
+                </form>
+                
+                <!-- Formulario 3 -->
+                <form id="form3" class="form3" data-form="3" method="post">
+                    <h3>Añade los estudios necesarios para el caso</h3>
+                <p class="p-principal">Pon un nombre y asegúrate de que el archivo sea PDF o JPEG.</p>
+
+                <div id="studies-container" class="studies-container">
+                    <!-- Contenedor para estudios -->
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" id="remove-study" class="btn-remove-study">
+                        <i class="fa-solid fa-circle-question"></i> Eliminar estudio</button>
+                    <button type="button" id="add-study" class="btn-add-study">
+                        <i class="fa-solid fa-circle-question"></i> Agregar estudio</button>
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" id="back2">Atrás</button>
+                    <button type="button" id="next3">Siguiente</button>
+                </div>
+            </form>
+
+            <!-- Formulario 4 -->
+            <form id="form4" class="form4" data-form="4" method="post">
+                <h3>Preguntas para el caso</h3>
+                <p class="p-principal">Introduce las preguntas que serán parte del caso clínico</p>
+                <p class="p-secundario">Presiona " <i class="fa-solid fa-circle-question"></i> Agregar pregunta " para
+                    añadir una pregunta</p>
+                <p class="p-secundario">Presiona <i class="fa-solid fa-plus"></i> para agregar los incisos</p>
+
+                <div class="preguntas-container" id="preguntas-container">
+                    <!-- Aquí se insertarán dinámicamente las preguntas -->
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" id="remove-question" class="btn-remove-question">
+                        <i class="fa-solid fa-circle-question"></i> Eliminar pregunta</button>
+                    <button type="button" id="add-question" class="btn-add-question">
+                        <i class="fa-solid fa-circle-question"></i> Agregar pregunta</button>
+                </div>
+
+                <div class="btn-box">
+                    <button type="button" id="back3">Atrás</button>
+                    <button class="button" id="next4">Siguiente</button>
+                </div>
+            </form>
+
+            <!-- Formulario 5 -->
+            <form id="form5" class="form5" data-form="5">
+                <h3>El caso clinico se agregó exitosamente!</h3>
+                <img src="images/statusDone.png" alt="check" class="check">
+                <p class="p-principal">Presiona atrás si deseas editar algún elemento, de lo contrario presiona
+                    finalizar para volver al menú de administrador donde podrás ver los casos clinicos agregados.</p>
+                <div id="container-mensaje-alerta">
+                    <!-- Aqui va el mensaje -->
+                </div>
+                <div class="btn-box">
+                    <button type="button" id="back4" class="btn btn-primary btn-atras">Atrás</button>
+                    <button type="button" id="next5" class="btn btn-primary btn-summit">Finalizar</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="height-spacer"></div>
+    </main>
+
+    <script src="./js/case_form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

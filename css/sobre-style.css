@@ -1,0 +1,171 @@
+html,
+body {
+  background: linear-gradient(100deg, #eaecf7 0%, #dce0f3 100%);
+  font-family: 'Poppins', sans-serif;
+  /* Aplica la fuente Poppins */
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2f50ff; /* Color predeterminado */
+  display: inline-block; /* Asegura que no se generen espacios */
+}
+
+.brand-ci,
+.brand-med {
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  line-height: 1; /* Ajusta la altura de línea para evitar espacios */
+}
+
+.brand-ci {
+  color: #00723e; /* Verde */
+}
+
+.brand-med {
+  color: #2f50ff; /* Azul actual */
+}
+
+.navbar-nav .nav-link {
+  color: #000000;
+  font-weight: 500;
+  transition: font-weight 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-admin {
+  background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+  border-radius: 50px;
+  color: white;
+  padding: 8px 20px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-admin:hover {
+  background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+}
+
+.btn-admin .bi-person-circle {
+  font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  /* Cambiamos a 'relative' para que no sea fijo */
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilo del encabezado principal */
+.btn-simulacion {
+  background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+  border-radius: 50px;
+  color: white;
+  padding: 10px 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  margin-left: 65px;
+  /* Desplazamos el texto hacia la derecha */
+}
+
+.btn-simulacion:hover {
+  background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+}
+
+.feature-card-top {
+  margin-top: 40px;
+  /* Desplazamos el texto hacia abajo */
+  background: white;
+  width: 100%;
+  /*El ancho del cuadro será el 100% del contenedor */
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 80px;
+  margin-left: 25px;
+  margin-right: 120px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.feature-card-bottom {
+  margin-top: 40px;
+  /* Desplazamos el texto hacia abajo */
+  background: white;
+  width: 100%;
+  /*El ancho del cuadro será el 100% del contenedor */
+  max-width: 350px;
+  padding: 15px;
+  border-radius: 20px;
+  color: black;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 25px;
+  margin-right: 120px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.feature-title {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin: 10px;
+  text-align: center;
+  /* Centramos el título */
+}
+
+.feature-text {
+  color: #6c757d;
+  font-size: 14px;
+  margin-left: 10px;
+  text-align: justify;
+  /* Justificamos el texto */
+}
+
+
+.main-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 100xpx;
+  margin-left: 60px;
+  /* Desplazamos el texto hacia la derecha */
+  margin-top: 50px;
+  /* Desplazamos el texto hacia abajo */
+  margin-right: 100px;
+}
+
+.main-text {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 25px;
+  margin-left: 60px;
+  margin-top: 20px;
+  margin-right: 120px;
+}
+
+.custom-image {
+  max-width: 70%;
+  /* Ajusta el porcentaje según sea necesario */
+  margin-left: 30px;
+}
+

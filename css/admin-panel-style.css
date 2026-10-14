@@ -1,0 +1,162 @@
+html,
+body {
+    background: linear-gradient(100deg, #eaecf7 0%, #dce0f3 100%);
+    font-family: 'Poppins', sans-serif;
+    /* Aplica la fuente Poppins */
+}
+
+/* Navbar */
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f50ff;
+    /* Color predeterminado */
+    display: inline-block;
+    /* Asegura que no se generen espacios */
+}
+
+.brand-ci,
+.brand-med {
+    margin: 0;
+    /* Sin márgenes */
+    padding: 0;
+    /* Sin relleno */
+    line-height: 1;
+    /* Ajusta la altura de línea para evitar espacios */
+}
+
+.brand-ci {
+    color: #00723e;
+    /* Verde */
+}
+
+.brand-med {
+    color: #2f50ff;
+    /* Azul actual */
+}
+
+.navbar-nav {
+    padding-right: 80px;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    font-weight: 500;
+    transition: font-weight 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-exit {
+    background: linear-gradient(90deg, #ff2f3d 0%, #8b092e 100%);
+    border-radius: 50px;
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-exit:hover {
+    background: linear-gradient(90deg, #8b092e 0%, #ff2f3d 100%);
+}
+
+.btn-admin .bi-box-arrow-left {
+    font-size: 20px;
+}
+
+/* Main */
+main {
+    padding-bottom: 50px;
+}
+
+/** Modal para actualizar casos **/
+
+/* Contenedor de preguntas */
+#preguntas-container {
+    margin-top: 20px;
+}
+
+.pregunta-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.pregunta-container p.p-pregunta {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.inciso-container .invalid-feedback {
+    display: block;
+    /* Asegura que el mensaje se muestre debajo */
+    margin-top: 0.25rem;
+    /* Espaciado entre el campo y el mensaje */
+    font-size: 0.875rem;
+    /* Tamaño de letra pequeño */
+    color: #dc3545;
+    /* Rojo para errores */
+}
+
+.option-list {
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-item input[type="text"] {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.btn-box {
+    margin-top: 15px;
+}
+
+/* Contenedor de los estudios */
+.options-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.study-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.study-item h6 {
+    margin-bottom: 10px;
+}
+
+.estudio-item {
+    display: block;
+    margin-bottom: 5px;
+    /* Espacio opcional entre las opciones */
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+}

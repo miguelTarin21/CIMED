@@ -1,0 +1,443 @@
+html,
+body {
+    background: linear-gradient(100deg, #eaecf7 0%, #dce0f3 100%);
+    font-family: 'Poppins', sans-serif;
+    /* Aplica la fuente Poppins */
+}
+
+/* Navbar */
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f50ff;
+    /* Color predeterminado */
+    display: inline-block;
+    /* Asegura que no se generen espacios */
+}
+
+.brand-ci,
+.brand-med {
+    margin: 0;
+    /* Sin márgenes */
+    padding: 0;
+    /* Sin relleno */
+    line-height: 1;
+    /* Ajusta la altura de línea para evitar espacios */
+}
+
+.brand-ci {
+    color: #00723e;
+    /* Verde */
+}
+
+.brand-med {
+    color: #2f50ff;
+    /* Azul actual */
+}
+
+.navbar-nav {
+    padding-right: 80px;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    font-weight: 500;
+    transition: font-weight 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-exit {
+    background: linear-gradient(90deg, #ff2f3d 0%, #8b092e 100%);
+    border-radius: 50px;
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-exit:hover {
+    background: linear-gradient(90deg, #8b092e 0%, #ff2f3d 100%);
+}
+
+.btn-admin .bi-box-arrow-left {
+    font-size: 20px;
+}
+
+
+/*Main*/
+h1 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.container {
+    width: 720px;
+    margin: 2% auto;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    /* Para tener espacio interno sin overflow */
+    transition: height 0.5s ease;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: none;
+    /* Inicialmente ocultamos todos los formularios */
+    width: 100%;
+    position: relative;
+}
+
+form.active {
+    display: block;
+    /* Solo el formulario activo se mostrará */
+    transition: 0.5s ease;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    margin-bottom: -1rem;
+}
+
+input:focus {
+    /* box-shadow: 0 0 10px rgb(114, 171, 241); */
+    border: 1px solid #4a90e2;
+}
+
+.input-group {
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    top: 20px;
+    left: 9px;
+    padding: 0 5px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+input:focus+.form-label,
+input:valid+.form-label {
+    top: -0px;
+    font-size: 12px;
+    color: #4a90e2;
+    background-color: white;
+}
+
+.textarea-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    font-size: 13px;
+    resize: none;
+    margin-top: 1rem;
+}
+
+textarea:focus {
+    border: 1px solid #4a90e2;
+}
+
+.text-label {
+    position: absolute;
+    top: 30px;
+    left: 9px;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s ease;
+    pointer-events: none;
+    background-color: white;
+    padding: 0 5px;
+}
+
+/* Estilos cuando el textarea está enfocado o tiene texto */
+textarea:focus+.text-label,
+textarea:not(:placeholder-shown)+.text-label {
+    top: 4px;
+    font-size: 12px;
+    color: #4a90e2;
+    background-color: white;
+}
+
+textarea::placeholder {
+    color: transparent;
+}
+
+p {
+    text-align: center;
+    color: #888;
+}
+
+.p-principal {
+    font-size: 14px;
+}
+
+.p-secundario {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.checkbox-item {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.label-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline-primary {
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+    padding: 5px 10px;
+    margin-right: -30px;
+    font-size: 14px;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(74, 145, 226, 0.225);
+}
+
+.distractor {
+    margin-left: 10px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.distractor.active {
+    color: red;
+}
+
+
+::placeholder {
+    color: #777;
+}
+
+/* Button styles */
+.btn-box {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+form .check {
+    display: block;
+    margin: 0 auto;
+    max-width: 240px;
+}
+
+form button {
+    width: 100px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+    border-radius: 10px;
+    border: 0;
+    border-color: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+}
+
+.btn-summit {
+    width: 100px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.btn-summit:hover {
+    background: linear-gradient(90deg, #42a7ff 0%, #2f50ff 100%);
+}
+
+.step-row {
+    width: 720px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.step-col {
+    width: 240px;
+    text-align: center;
+    color: #000;
+    position: relative;
+}
+
+#progress {
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background: linear-gradient(90deg, #2f50ff 0%, #42a7ff 100%);
+    transition: 1s;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#progress::after {
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #42a7ff;
+}
+
+.error {
+    border: 2px solid red !important;
+}
+
+input[type="radio"].error+label {
+    color: red;
+}
+
+.height-spacer {
+    visibility: hidden;
+    height: 1px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    width: 100%;
+    background-color: #f8f9fa;
+    /* Color de fondo gris claro */
+    padding: 15px 0;
+    position: fixed;
+    /* Hace que el footer quede fijo al final */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    /* Asegura que el footer esté siempre visible sobre otros elementos */
+    height: 50px;
+}
+
+.footer .container {
+    text-align: center;
+    background-color: #f8f9fa;
+    /* Color de fondo del contenedor de texto */
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+
+/* Input styles */
+.input-group,
+.textarea-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.textarea-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.textarea-group textarea:focus {
+    border-color: #2f50ff;
+}
+
+.textarea-group textarea {
+    height: 100px;
+}
+
+.form-control {
+    font-size: 13px;
+    margin-bottom: -1rem;
+}
+
+
+.btn {
+    flex: 1;
+    margin: 5px;
+}
+
+.no-flex {
+    flex: unset;
+    margin: unset;
+}
+
+.btn-outline-primary {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(16, 19, 104);
+    font-size: 16px;
+    border-radius: 10px;
+    color: rgb(30, 63, 108);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CIMED - Agregar estudio</title>
+	<link rel="icon" type="image/png" href="images/CimarronMedicoIndexIcon.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/analisis-form.css" />
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="./">
+				<span class="brand-name">
+					<span class="brand-ci">CI</span><span class="brand-med">MED</span>
+				</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="admin-panel" style="margin-left: 130px;">Panel Administrador</a>
+					</li>
+				</ul>
+			</div>
+			<a href="admin-panel" class="btn btn-primary btn-exit d-flex align-items-center no-flex">
+				<i class="bi bi-box-arrow-left me-2"></i> Regresar
+			</a>
+
+		</div>
+	</nav>
+
+	<!-- Input form -->
+	<h1>Registro de un estudio clínico</h1>
+
+	<div class="step-row">
+		<div id="progress" class="progress-bar">
+			<div class="step-col"></div>
+			<div class="step-col"></div>
+			<div class="step-col"></div>
+			<div class="step-col"></div>
+		</div>
+	</div>
+
+	<div class="container" id="container-form">
+
+		<!-- Formulario 1 -->
+		<form id="form1" class="active">
+			<h3>Detalles del estudio</h3>
+			<p class="p-principal">Introduce la información general del estudio clínico</p>
+			<div class="input-group">
+				<input type="text" id="nombre-Estudio" required>
+				<label for="validationDefault01" class="form-label">Nombre del estudio</label>
+			</div>
+			<div class="textarea-group">
+				<textarea id="descrip-Estudio" placeholder=" " required></textarea>
+				<label for="descrip-Estudio" class="text-label">Descripción del estudio</label>
+			</div>
+			<div class="btn-box">
+				<button type="button" id="next1">Siguiente</button>
+			</div>
+		</form>
+
+		<!-- Formulario 2 -->
+		<form id="form2" class="form2">
+			<h3>Tipo de estudio</h3>
+			<p class="p-principal">Selecciona la categoría a la que pertenece el estudio.</p>
+			<div class="btn-group d-flex justify-content-center" role="group" aria-label="Basic radio toggle button group">
+				<div class="radio-item me-5">
+					<input type="radio" class="btn-check" name="tipoEstudio" id="btnradio1" autocomplete="off" value="Laboratorios">
+					<label class="btn btn-outline-primary" for="btnradio1">Laboratorios</label>
+				</div>
+				<div class="radio-item ms-5">
+					<input type="radio" class="btn-check" name="tipoEstudio" id="btnradio2" autocomplete="off" value="Gabinete">
+					<label class="btn btn-outline-primary" for="btnradio2">Gabinete</label>
+				</div>
+			</div>
+			<div class="btn-box">
+				<button type="button" id="back1" >Atrás</button>
+				<button type="button" id="next2" >Siguiente</button>
+			</div>
+		</form>
+	
+
+		<!-- Formulario 3 -->
+		<form id="form3" class="form3">
+			<h3>El estudio se agregó exitosamente!</h3>
+			<img src="images/statusDone.png" alt="check" class="check">
+			<p class="p-principal">Presiona atrás si deseas editar algún elemento, de lo contrario presiona finalizar
+				para volver al menú de administrador donde podrás ver los estudios agregados.</p>
+			<div class="btn-box">
+				<button type="button" id="back2">Atrás</button>
+				<a href="admin-panel" class="btn btn-primary btn-summit">Finalizar</a>
+			</div>
+		</form>
+		<div class="height-spacer"></div>
+	</div>
+
+	<script src="./js/analisis-form.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
